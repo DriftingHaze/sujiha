@@ -16,15 +16,16 @@
     { "display": "Video Games" }
   ],
   "games": [
-    { "display": "Blue Archive", "favorite": false },
-    { "display": "The Mimic", "favorite": false },
-    { "display": "Genshin Impact (ps)", "favorite": false },
-    { "display": "My Singing Monsters", "favorite": false },
+    { "display": "Atelier Shallie", "favorite": true },
     { "display": "Mario Kart Wii", "favorite": true },
-    { "display": "Geometry Dash", "favorite": false },
-    { "display": "Breath of the Wild", "favorite": false },
+    { "display": "Blue Archive", "favorite": true },
+    { "display": "The Mimic", "favorite": true },
+    { "display": "Genshin Impact (ps)", "favorite": false },
     { "display": "Honkai: Star Rail", "favorite": false },
-    { "display": "Planet Coaster", "favorite": false }
+    { "display": "Breath of the Wild", "favorite": false },
+    { "display": "Planet Coaster", "favorite": false },
+    { "display": "My Singing Monsters", "favorite": false },
+    { "display": "Geometry Dash", "favorite": false }
   ],
   "music": [
     {
