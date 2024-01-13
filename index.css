@@ -1,0 +1,229 @@
+html,
+body {
+  line-height: 1.4;
+  font-weight: normal;
+  font-size: large;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  font-size: medium;
+}
+li {
+  font-size: medium;
+}
+img {
+  pointer-events: none;
+}
+
+#bg {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  animation-name: fadein;
+  animation-duration: 2s;
+  filter: blur(4px);
+  z-index: -100;
+  animation: zoomInOut 10s infinite;
+}
+
+
+.container {
+  /* background-color: skyblue; */
+  opacity: 0.9;
+  padding: 5px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.2);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.outline {
+  margin: 4px;
+  box-shadow: 0 0 5px blue;
+  /* border-radius: 12px; */
+  border-width: 2px;
+  border-color: blue;
+  border-style: solid;
+  /* background-color: skyblue; */
+  backdrop-filter: blur(10px);
+  width: fit-content;
+
+ 
+  border-image: linear-gradient(90deg, blue, violet);
+  border-image-slice: 1;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+.centered {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  opacity: 0.9;
+  background-color: antiquewhite;
+  width: 50vw;
+  height: 170vh;
+}
+.right {
+  opacity: 0.9;
+  background-color: antiquewhite;
+  width: 50vw;
+  height: 170vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: fit-content;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+#portal {
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) rotate(0deg) scale(0);
+}
+#portal.play {
+  animation: rotateAnimation 2s ease-in 1 forwards;
+}
+
+#scroll-direction-hint {
+  z-index: -99;
+  left: 0;
+  right: 0;
+  top: 25%;
+  height: 40%;
+  width: auto;
+  position: absolute;
+}
+#scroll-direction-hint img {
+  height: 40%;
+  width: auto;
+}
+
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(125%);
+  }
+  100% {
+    transform: translateX(-125%);
+  }
+}
+
+@keyframes moveAndRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(25px) rotate(-2.5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  75% {
+    transform: translateY(-25px) rotate(2.5deg);
+  }
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(2);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
